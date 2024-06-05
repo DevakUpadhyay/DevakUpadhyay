@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Your Expense Reports</h2>
+  <ul>
+    {% for report in reports %}
+      <li><a href="{% url 'report_detail' report.id %}">{{ report.title }}</a> - {{ report.get_status_display }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

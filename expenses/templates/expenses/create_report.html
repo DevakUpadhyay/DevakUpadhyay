@@ -1,0 +1,11 @@
+<!-- expenses/templates/expenses/create_report.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Create Expense Report</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Report</button>
+  </form>
+{% endblock %}
